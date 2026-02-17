@@ -36,10 +36,10 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Project site (e.g. username.github.io/portfolio-github): use repo name.
-          # User site (username.github.io): leave empty.
+          # User site (username.github.io): full URL so assets load correctly on GitHub Pages.
+          # Project site (e.g. username.github.io/repo): use repo name as path.
           BASE_PATH: ${{ endsWith(github.event.repository.name, '.github.io') && '' || format('/{0}', github.event.repository.name) }}
-          ASSET_PREFIX: ${{ endsWith(github.event.repository.name, '.github.io') && '' || format('/{0}/', github.event.repository.name) }}
+          ASSET_PREFIX: ${{ endsWith(github.event.repository.name, '.github.io') && format('https://{0}.github.io/', github.repository_owner) || format('/{0}/', github.event.repository.name) }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
