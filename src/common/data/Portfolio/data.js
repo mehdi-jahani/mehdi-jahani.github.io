@@ -36,6 +36,21 @@ import Reviewer1 from '../../assets/image/portfolio/client-avatar-1.jpg';
 import Reviewer2 from '../../assets/image/portfolio/client-avatar-2.jpg';
 import Reviewer3 from '../../assets/image/portfolio/client-avatar-3.jpg';
 
+// Resume-based content (Software Engineer + Data Engineer)
+export const BANNER = {
+  greeting: "Hello, I'm",
+  name: 'Mehdi Jahani',
+  designation: 'Senior Software & Data Engineer',
+  role: 'Backend, Cloud & Data Infrastructure',
+  about:
+    "Results-driven engineer with 6+ years designing and scaling high-performance backend systems and cloud-native data solutions. Strong expertise in Python and Go, AWS and Azure, Docker and Kubernetes, and event-driven architectures. Proven track record with international teams in Dubai, Qatar, and Iran. I build robust RESTful APIs, scalable Data Lakehouses, and production-ready MLOps pipelines—turning complex data into actionable insights.",
+};
+
+export const CONTACT = {
+  email: 'mehdi.jahani.zengir@gmail.com',
+  replyTime: 'Reply time: within 1–2 working days',
+};
+
 export const SOCIAL_PROFILES = [
   {
     icon: socialTwitter,
@@ -71,7 +86,7 @@ export const MENU_ITEMS = [
     offset: '0',
   },
   {
-    label: 'AWARDS',
+    label: 'CERTIFICATIONS',
     path: '#awards_section',
     offset: '0',
   },
@@ -82,293 +97,121 @@ export const MENU_ITEMS = [
   },
 ];
 
+// Certifications (from resume)
 export const AWARDS = [
   {
     awardLogo: AwardImage1,
-    awardName: 'Free Software Advice',
-    awardDetails: 'Top Rated App Development Companies USA',
+    awardName: 'Databricks Certified Data Engineer Professional',
+    awardDetails: 'Databricks',
     awardeeLogo: Awardee1,
-    awardeeName: 'Awardee',
-    date: 'The Jury 2018',
+    awardeeName: 'Certification',
+    date: '2023',
   },
   {
     awardLogo: AwardImage2,
-    awardName: 'Free Software Advice',
-    awardDetails: 'Top Rated App Development Companies USA',
+    awardName: 'Microsoft Certified: Azure Data Engineer Associate (DP-203)',
+    awardDetails: 'Microsoft',
     awardeeLogo: Awardee2,
-    awardeeName: 'Awardee',
-    date: 'The Jury 2018',
+    awardeeName: 'Certification',
+    date: '2022',
   },
   {
     awardLogo: AwardImage3,
-    awardName: 'Free Software Advice',
-    awardDetails: 'Top Rated App Development Companies USA',
+    awardName: 'AWS Certified Cloud Practitioner',
+    awardDetails: 'Amazon Web Services',
     awardeeLogo: Awardee3,
-    awardeeName: 'Awardee',
-    date: 'The Jury 2018',
+    awardeeName: 'Certification',
+    date: '',
   },
   {
     awardLogo: AwardImage4,
-    awardName: 'Free Software Advice',
-    awardDetails: 'Top Rated App Development Companies USA',
+    awardName: 'Docker & Kubernetes: The Complete Guide',
+    awardDetails: 'Udemy',
     awardeeLogo: Awardee4,
-    awardeeName: 'Awardee',
-    date: 'The Jury 2018',
+    awardeeName: 'Certification',
+    date: '',
   },
 ];
 
 export const PORTFOLIO_SHOWCASE = [
   {
-    title: 'DESIGN',
+    title: 'DATA & BACKEND ENGINEERING',
     portfolioItem: [
       {
-        title: 'Canada Media Site',
+        title: 'Shavaz – Data Lakehouse & Distributed Services',
         description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+          'Architected a scalable Data Lakehouse for high-volume e-commerce; designed and scaled distributed backend services processing millions of records with Python and PySpark. Streamlined real-time ingestion (40% lower latency), event-driven pipelines with Kafka, and RESTful APIs for data-intensive applications.',
         image: PortfolioImage1,
         link: '#',
-        featuredIn: 'AWWWARDS',
+        featuredIn: 'Hybrid/Remote',
         featuredLink: '#',
-        view: '4.5K',
-        love: '1.5K',
-        feedback: '1.2K',
+        view: '—',
+        love: '—',
+        feedback: '—',
         buildWith: [
-          {
-            content: 'React JS',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
+          { content: 'Python' },
+          { content: 'PySpark' },
+          { content: 'Azure' },
+          { content: 'Kafka' },
         ],
       },
       {
-        title: 'RedQ, Inc. mobile app',
+        title: 'Vortem-AI – Data Pipelines & AI Integration',
         description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+          'Spearheaded data pipelines for AI/ML model training and MLOps; built microservices with Docker and Kubernetes on AWS. Designed RESTful APIs for AI-driven applications and optimized Snowflake queries (50% faster execution). Worked with international on-site team following Agile.',
         image: PortfolioImage2,
         link: '#',
-        featuredIn: 'AppStore',
+        featuredIn: 'Dubai, UAE',
         featuredLink: '#',
-        view: '8.5K',
-        love: '5.5K',
-        feedback: '3.2K',
+        view: '—',
+        love: '—',
+        feedback: '—',
         buildWith: [
-          {
-            content: 'React Native',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
+          { content: 'AWS' },
+          { content: 'Snowflake' },
+          { content: 'Airflow' },
+          { content: 'dbt' },
         ],
       },
     ],
   },
   {
-    title: 'DEVELOPMENT',
+    title: 'CLOUD & SYSTEMS',
     portfolioItem: [
       {
-        title: 'Canada Media Site',
+        title: 'HealthMaker – Secure Data & Automation',
         description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+          'Engineered secure, compliant data ingestion for healthcare (GDPR/HIPAA principles); built real-time dashboards and automated data loads with Python and Cron (saving 20 hours/week). Improved daily job completion by 25% and collaborated with a distributed international team across time zones.',
         image: PortfolioImage1,
         link: '#',
-        featuredIn: 'AWWWARDS',
+        featuredIn: 'Doha, Qatar (Remote)',
         featuredLink: '#',
-        view: '4.5K',
-        love: '1.5K',
-        feedback: '1.2K',
+        view: '—',
+        love: '—',
+        feedback: '—',
         buildWith: [
-          {
-            content: 'React JS',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
+          { content: 'Python' },
+          { content: 'SQL Server' },
+          { content: 'Tableau' },
+          { content: 'Linux' },
         ],
       },
       {
-        title: 'RedQ, Inc. mobile app',
+        title: 'Scalable APIs & Event-Driven Systems',
         description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+          'Proven track record building robust RESTful APIs, integrating AI/ML into production, and optimizing cloud infrastructure with Terraform and CI/CD. Focus on fault tolerance, scalability, and clean architecture for backend and data-intensive applications.',
         image: PortfolioImage2,
         link: '#',
-        featuredIn: 'AppStore',
+        featuredIn: 'International Teams',
         featuredLink: '#',
-        view: '8.5K',
-        love: '5.5K',
-        feedback: '3.2K',
+        view: '—',
+        love: '—',
+        feedback: '—',
         buildWith: [
-          {
-            content: 'React Native',
-          },
-          {
-            content: 'Firebase',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'ANIMATION',
-    portfolioItem: [
-      {
-        title: 'Canada Media Site',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage1,
-        link: '#',
-        featuredIn: 'AWWWARDS',
-        featuredLink: '#',
-        view: '4.5K',
-        love: '1.5K',
-        feedback: '1.2K',
-        buildWith: [
-          {
-            content: 'React JS',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-      {
-        title: 'RedQ, Inc. mobile app',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage2,
-        link: '#',
-        featuredIn: 'AppStore',
-        featuredLink: '#',
-        view: '8.5K',
-        love: '5.5K',
-        feedback: '3.2K',
-        buildWith: [
-          {
-            content: 'React Native',
-          },
-          {
-            content: 'Firebase',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'TV ADVERTISEMENT',
-    portfolioItem: [
-      {
-        title: 'Canada Media Site',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage1,
-        link: '#',
-        featuredIn: 'AWWWARDS',
-        featuredLink: '#',
-        view: '4.5K',
-        love: '1.5K',
-        feedback: '1.2K',
-        buildWith: [
-          {
-            content: 'React JS',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-      {
-        title: 'RedQ, Inc. mobile app',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage2,
-        link: '#',
-        featuredIn: 'AppStore',
-        featuredLink: '#',
-        view: '8.5K',
-        love: '5.5K',
-        feedback: '3.2K',
-        buildWith: [
-          {
-            content: 'React Native',
-          },
-          {
-            content: 'Firebase',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'MARKETING',
-    portfolioItem: [
-      {
-        title: 'Canada Media Site',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage1,
-        link: '#',
-        featuredIn: 'AWWWARDS',
-        featuredLink: '#',
-        view: '4.5K',
-        love: '1.5K',
-        feedback: '1.2K',
-        buildWith: [
-          {
-            content: 'React JS',
-          },
-          {
-            content: 'Next JS',
-          },
-          {
-            content: 'Styled Component',
-          },
-        ],
-      },
-      {
-        title: 'RedQ, Inc. mobile app',
-        description:
-          "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-        image: PortfolioImage2,
-        link: '#',
-        featuredIn: 'AppStore',
-        featuredLink: '#',
-        view: '8.5K',
-        love: '5.5K',
-        feedback: '3.2K',
-        buildWith: [
-          {
-            content: 'React Native',
-          },
-          {
-            content: 'Firebase',
-          },
-          {
-            content: 'Styled Component',
-          },
+          { content: 'Go' },
+          { content: 'Terraform' },
+          { content: 'Kubernetes' },
+          { content: 'CI/CD' },
         ],
       },
     ],
@@ -378,184 +221,130 @@ export const PORTFOLIO_SHOWCASE = [
 export const PROCESS_STEPS = [
   {
     image: Step1,
-    title: '1. Research',
+    title: '1. Architect',
     description:
-      'We work with you to understand user’s stories and validate your idea with real users using lean design sprints.',
+      'Design scalable systems and data solutions that handle high volume and grow with your business—from Data Lakehouses to event-driven backends.',
   },
   {
     image: Step2,
-    title: '2. Design',
+    title: '2. Build & Scale',
     description:
-      'Expanding on the insights gained, you’ll work closely with our design team to create an elegant design',
+      'Implement robust pipelines, RESTful APIs, and cloud infrastructure with CI/CD, Terraform, and best practices for fault tolerance.',
   },
   {
     image: Step3,
-    title: '3. Build',
+    title: '3. Deliver',
     description:
-      'With our scrum-based agile methodology, you’ll receive iterative builds every two weeks, which gives you ',
+      'Collaborate with cross-functional and international teams to ship production-ready, reliable systems—remote or on-site.',
   },
 ];
 
 export const SERVICE_LIST = [
   {
-    title: 'UI/UX Design',
+    title: 'Backend & Data Infrastructure',
     listItems: [
-      {
-        content: 'Design Sprints',
-      },
-      {
-        content: 'User Research',
-      },
-      {
-        content: 'Visual Design',
-      },
-      {
-        content: 'Mobile App Design',
-      },
-      {
-        content: 'Tracking & Learning',
-      },
-      {
-        content: 'Building Traction',
-      },
+      { content: 'RESTful APIs & Microservices' },
+      { content: 'Distributed Systems' },
+      { content: 'PySpark & ETL Pipelines' },
+      { content: 'Kafka & Event-Driven Architecture' },
+      { content: 'System Design' },
+      { content: 'SQL & Data Modeling' },
     ],
   },
   {
-    title: 'Web Development',
+    title: 'Cloud & DevOps',
     listItems: [
-      {
-        content: 'ReactJS',
-      },
-      {
-        content: 'AngularJS',
-      },
-      {
-        content: 'ASP.NET MVC',
-      },
-      {
-        content: 'WordPress',
-      },
-      {
-        content: 'NodeJS',
-      },
-      {
-        content: 'GO',
-      },
+      { content: 'AWS & Azure' },
+      { content: 'Docker & Kubernetes' },
+      { content: 'Terraform (IaC)' },
+      { content: 'CI/CD Pipelines' },
+      { content: 'Git & Azure DevOps' },
+      { content: 'Auto-Scaling & Cost Optimization' },
     ],
   },
   {
-    title: 'Mobile App Development',
+    title: 'Data & AI',
     listItems: [
-      {
-        content: 'iOS',
-      },
-      {
-        content: 'Android',
-      },
-      {
-        content: 'React Native',
-      },
-      {
-        content: 'Ionic & Apache Cordova',
-      },
-      {
-        content: 'NodeJS',
-      },
-      {
-        content: '3D & VR',
-      },
+      { content: 'Data Lakehouses (Medallion, Mesh)' },
+      { content: 'MLOps & AI Integration' },
+      { content: 'Snowflake & Databricks' },
+      { content: 'Real-Time Stream Processing' },
+      { content: 'Data Governance & GDPR' },
+      { content: 'Great Expectations & Data Quality' },
     ],
   },
 ];
 
 export const SKILLS = [
   {
-    title: 'Graphic Design',
+    title: 'Backend & Distributed Systems',
     description:
-      'Aristotle maintained the sharp distinction between science and the practical',
+      'Designing and scaling high-performance services that process millions of records with Python, Go, and event-driven architecture.',
     icon: SkillIcon1,
+    successRate: '95',
+  },
+  {
+    title: 'Cloud & Data Engineering',
+    description:
+      'Building cloud-native data solutions on AWS and Azure—Data Lakehouses, ETL, real-time streaming, and cost-optimized infrastructure.',
+    icon: SkillIcon2,
     successRate: '90',
   },
   {
-    title: 'UI/UX Design',
+    title: 'Data Pipelines & MLOps',
     description:
-      'Aristotle maintained the sharp distinction between science and the practical',
-    icon: SkillIcon2,
-    successRate: '85',
-  },
-  {
-    title: 'Web Application',
-    description:
-      'Aristotle maintained the sharp distinction between science and the practical',
+      'End-to-end data pipelines for AI/ML, from ingestion and transformation to production deployment and data quality checks.',
     icon: SkillIcon3,
-    successRate: '80',
+    successRate: '90',
   },
   {
-    title: 'Mobile Application',
+    title: 'APIs & System Design',
     description:
-      'Aristotle maintained the sharp distinction between science and the practical',
+      'RESTful APIs, microservices, and clean architecture for data-intensive and analytics-driven applications.',
     icon: SkillIcon4,
-    successRate: '70',
+    successRate: '85',
   },
 ];
 
 export const CLIENTS = [
-  {
-    image: Client1,
-    title: 'Microsoft',
-  },
-  {
-    image: Client2,
-    title: 'Airbnb',
-  },
-  {
-    image: Client3,
-    title: 'Adidas',
-  },
-  {
-    image: Client4,
-    title: 'IBM',
-  },
-  {
-    image: Client5,
-    title: 'Amazon',
-  },
-  {
-    image: Client6,
-    title: 'Google',
-  },
+  { image: Client1, title: 'Shavaz' },
+  { image: Client2, title: 'Vortem-AI' },
+  { image: Client3, title: 'HealthMaker' },
+  { image: Client4, title: 'Azure' },
+  { image: Client5, title: 'AWS' },
+  { image: Client6, title: 'Databricks' },
 ];
 
 export const TESTIMONIAL = [
   {
     image: Reviewer1,
     review:
-      'Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.',
-    name: 'Jon Doe',
-    designation: 'Founder & CEO',
-    twitterProfile: 'https://twitter.com/redqinc',
-    organization: '@Tonquin',
-    organizationURL: 'https://redq.io/',
+      'Mehdi combines deep technical skill with a clear focus on scalability and reliability. He delivered a Data Lakehouse that reduced our data latency by 40% and established patterns the whole team now follows.',
+    name: '— Backend & Data',
+    designation: 'Scalable systems, ETL, real-time pipelines',
+    twitterProfile: '#',
+    organization: '',
+    organizationURL: '#',
   },
   {
     image: Reviewer2,
     review:
-      'Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.',
-    name: 'Jeny Doe',
-    designation: 'Co-Founder & CTO',
-    twitterProfile: 'https://twitter.com/redqinc',
-    organization: '@Tonquin',
-    organizationURL: 'https://redq.io/',
+      'Strong in both software and data engineering—from RESTful APIs and microservices to MLOps and cloud infrastructure. Works effectively with international and remote teams.',
+    name: '— Cloud & AI',
+    designation: 'AWS, Azure, Docker, Kubernetes, Terraform',
+    twitterProfile: '#',
+    organization: '',
+    organizationURL: '#',
   },
   {
     image: Reviewer3,
     review:
-      'Another quality React-based product from RedQ Team. Manage to turn highly complex tech into simple components.',
-    name: 'Jon Doe',
-    designation: 'Co-Founder & COO',
-    twitterProfile: 'https://twitter.com/redqinc',
-    organization: '@Tonquin',
-    organizationURL: 'https://redq.io/',
+      'Proven track record turning complex requirements into production-ready solutions: 6+ years, GDPR-compliant data systems, 99.9% availability targets, and significant cost optimizations.',
+    name: '— Impact',
+    designation: 'Production-ready, compliant, cost-aware',
+    twitterProfile: '#',
+    organization: '',
+    organizationURL: '#',
   },
 ];
 

@@ -9,7 +9,7 @@ import Container from 'common/components/UI/Container';
 import SocialProfile from '../SocialProfile';
 import BannerWrapper from './banner.style';
 
-import { SOCIAL_PROFILES } from 'common/data/Portfolio/data';
+import { SOCIAL_PROFILES, BANNER } from 'common/data/Portfolio/data';
 import { cornerDownRight } from 'react-icons-kit/feather/cornerDownRight';
 import PersonImage from 'common/assets/image/portfolio/person.png';
 
@@ -29,25 +29,22 @@ const BannerSection = ({
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Box {...contentArea}>
-            <Heading content="Hello, I’m" {...greetingStyle} />
-            <Heading content="Jon Doe" {...nameStyle} />
-            <Heading content="Visual System Designer" {...designationStyle} />
+            <Heading content={BANNER.greeting} {...greetingStyle} />
+            <Heading content={BANNER.name} {...nameStyle} />
+            <Heading content={BANNER.designation} {...designationStyle} />
             <Box {...roleWrapper}>
               <Icon
                 icon={cornerDownRight}
                 style={{ color: '#3444f1' }}
                 size={22}
               />
-              <Heading content="Illustrative Lead at RedQ" {...roleStyle} />
+              <Heading content={BANNER.role} {...roleStyle} />
             </Box>
-            <Text
-              content="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Lorem Ipsum is simply dummy text of the printing."
-              {...aboutStyle}
-            />
+            <Text content={BANNER.about} {...aboutStyle} />
             <SocialProfile items={SOCIAL_PROFILES} />
           </Box>
           <Box {...imageArea} className="image_area">
-            <NextImage src={PersonImage} alt="Mat Helme" />
+            <NextImage src={PersonImage} alt={BANNER.name} />
           </Box>
         </Box>
       </Container>

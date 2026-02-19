@@ -22,16 +22,16 @@ const CallToAction = ({
       <Container noGutter mobileGutter width="1200px">
         <CallToActionWrapper>
           <Box {...textArea}>
-            <Heading content="What’s cooking in the lab?" {...title} />
+            <Heading content="Ready to build something impactful?" {...title} />
             <Text
-              content="The place to find the latest industry trends, new Blue Label Labs app launches and information to keep you at the top your tech game."
+              content="Whether you need scalable backend systems, data pipelines, or cloud infrastructure—let's talk. I work with international teams and ship production-ready solutions."
               {...description}
             />
           </Box>
           <Box {...buttonArea}>
             <ButtonWrapper>
               <Button
-                title="READ OUR BLOG "
+                title="GET IN TOUCH"
                 className="portfolio_button"
                 {...buttonStyle}
               />

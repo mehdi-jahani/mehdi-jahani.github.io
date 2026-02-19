@@ -10,6 +10,7 @@ import Container from 'common/components/UI/Container';
 import { ButtonWrapper } from '../../Portfolio/portfolio.style';
 import { ActiveStatus } from './contact.style';
 import Author from 'common/assets/image/portfolio/avatar.png';
+import { CONTACT } from 'common/data/Portfolio/data';
 
 const ContactSection = ({
   sectionWrapper,
@@ -28,7 +29,7 @@ const ContactSection = ({
           <Heading {...secTitle} content="Let’s Work Together" />
           <Text
             {...secDescription}
-            content="If you have a website or mobile app idea in mind or you need some advice about product design, feel free to contact me. Currently my time books quickly, so the sooner you write, the better it is for both of us."
+            content="Building backend systems, data pipelines, or scaling in the cloud? I'd love to hear about your project. Whether you need a Senior Software Engineer or Data Engineer for your team, reach out—I work with international teams and ship production-ready solutions."
           />
         </Box>
         <Box {...replyWrapper}>
@@ -37,17 +38,19 @@ const ContactSection = ({
           </ActiveStatus>
           <Heading
             as="h4"
-            content="Reply time: within 1-2 working days"
+            content={CONTACT.replyTime}
             {...replyTime}
           />
         </Box>
         <Box {...buttonWrapper}>
           <ButtonWrapper>
-            <Button
-              title="hello@redq.io"
-              className="portfolio_button"
-              {...buttonStyle}
-            />
+            <a href={`mailto:${CONTACT.email}`} style={{ textDecoration: 'none' }}>
+              <Button
+                title={CONTACT.email}
+                className="portfolio_button"
+                {...buttonStyle}
+              />
+            </a>
           </ButtonWrapper>
         </Box>
       </Container>

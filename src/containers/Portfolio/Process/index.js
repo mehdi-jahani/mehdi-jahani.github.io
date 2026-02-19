@@ -43,11 +43,11 @@ const ProcessSection = ({
         <Box {...secTitleWrapper}>
           <Heading
             {...secTitle}
-            content="From Lean Design Sprints to Agile Development"
+            content="From Architecture to Production"
           />
           <Text
             {...secDescription}
-            content="Our process is designed to give you the best shot at success."
+            content="I design for scale, build with best practices, and deliver with cross-functional and international teams."
           />
         </Box>
 
