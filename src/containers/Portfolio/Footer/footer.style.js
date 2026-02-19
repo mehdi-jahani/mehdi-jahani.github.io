@@ -90,3 +90,19 @@ export const FooterNavItem = styled.li`
     }
   }
 `;
+
+export const FooterContactBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  align-items: flex-start;
+  min-width: 0;
+
+  a {
+    display: inline-block;
+  }
+  .footer_phone,
+  a span {
+    white-space: nowrap;
+  }
+`;

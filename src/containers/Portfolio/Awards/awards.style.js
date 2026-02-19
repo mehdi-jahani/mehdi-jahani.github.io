@@ -61,8 +61,18 @@ export const AwardImageWrapper = styled.div`
 `;
 
 export const AwardeeLogo = styled.div`
-  margin-right: 20px;
+  margin-right: 12px;
   flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
 `;
 
 export const AwardeeDetails = styled.div``;

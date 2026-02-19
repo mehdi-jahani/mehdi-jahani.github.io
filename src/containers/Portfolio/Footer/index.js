@@ -15,9 +15,9 @@ import {
   Newsletter,
   FooterNav,
   FooterNavItem,
+  FooterContactBlock,
 } from './footer.style';
-import { FOOTER_MENU } from 'common/data/Portfolio/data';
-import { SOCIAL_PROFILES } from 'common/data/Portfolio/data';
+import { FOOTER_MENU, SOCIAL_PROFILES, CONTACT } from 'common/data/Portfolio/data';
 import { heart } from 'react-icons-kit/fa/heart';
 
 const Footer = ({
@@ -43,7 +43,7 @@ const Footer = ({
               content="So, do we work together?"
               {...titleStyle}
             />
-            <Link href="#">
+            <Link href="mailto:mehdi.jahani.zengir@gmail.com">
               <Heading as="h3" content="LET'S TALK!" {...linkStyle} />
             </Link>
           </Box>
@@ -72,23 +72,25 @@ const Footer = ({
             />
             <Text
               as="span"
-              content="© 2018 All rights reserved. "
+              content="© 2025 Mehdi Jahani. All rights reserved."
               {...copyrightStyle}
             />
-            <Link href="#">
-              {' '}
-              <Text as="span" content=" RedQ, Inc." {...copyrightStyle} />
-            </Link>
           </Box>
           <Box {...col} {...flexBox}>
-            <Box {...contactItem}>
-              <Text content="Need help?" {...contactTitle} />
-              <Text content="redq.io" {...contactInfo} />
-            </Box>
-            <Box {...contactItem}>
-              <Text content="Feel like talking" {...contactTitle} />
-              <Text content="+479-443-9334" {...contactInfo} />
-            </Box>
+            <FooterContactBlock>
+              <Box {...contactItem}>
+                <Text content="Email" {...contactTitle} />
+                <a href={`mailto:${CONTACT.email}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text content={CONTACT.email} {...contactInfo} />
+                </a>
+              </Box>
+              <Box {...contactItem}>
+                <Text content="Phone / WhatsApp / Telegram" {...contactTitle} />
+                <a href="https://wa.me/989358889813" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text content="+98 935 888 9813" {...contactInfo} className="footer_phone" />
+                </a>
+              </Box>
+            </FooterContactBlock>
           </Box>
         </Box>
 

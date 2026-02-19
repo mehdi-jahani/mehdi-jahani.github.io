@@ -34,7 +34,7 @@ const ContactSection = ({
         </Box>
         <Box {...replyWrapper}>
           <ActiveStatus>
-            <Image src={Author?.src} alt="Author Avatar" />
+            <Image src={CONTACT.avatarUrl || Author?.src} alt="Mehdi Jahani" />
           </ActiveStatus>
           <Heading
             as="h4"

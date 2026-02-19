@@ -56,7 +56,7 @@ const TestimonialSection = ({
           <Heading {...secTitle} content="What My Clients Say?" />
           <Text
             {...secDescription}
-            content="Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incid idunt ut labore"
+            content="What colleagues and teams say about working with me—focus on impact, reliability, and collaboration."
           />
         </Box>
         <TestimonialWrapper>
@@ -81,7 +81,7 @@ const TestimonialSection = ({
                     <TestimonialHead>
                       <TestimonialThumb>
                         <Image
-                          src={item.image?.src}
+                          src={typeof item.image === 'string' ? item.image : item.image?.src}
                           alt={`testimonial-avatar-${index + 1}`}
                         />
                       </TestimonialThumb>

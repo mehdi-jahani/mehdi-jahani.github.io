@@ -87,6 +87,8 @@ const AwardsSection = ({
                     <NextImage
                       src={award.awardLogo}
                       alt={`award-logo-${index}`}
+                      width={200}
+                      height={200}
                       {...awardLogoStyle}
                     />
                   </AwardImageWrapper>
@@ -96,7 +98,9 @@ const AwardsSection = ({
                     <AwardeeLogo>
                       <NextImage
                         src={award.awardeeLogo}
-                        alt={`awardee-logo-${index}`}
+                        alt="Certification"
+                        width={48}
+                        height={48}
                         {...awardeeLogoStyle}
                       />
                     </AwardeeLogo>

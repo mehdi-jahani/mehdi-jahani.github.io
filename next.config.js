@@ -9,7 +9,7 @@ const nextConfig = {
   basePath,
   assetPrefix: assetPrefix || undefined,
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ['pbs.twimg.com', 'images.unsplash.com', 'placehold.co'],
     unoptimized: true,
   },
   output: 'export',

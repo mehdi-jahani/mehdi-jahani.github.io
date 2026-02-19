@@ -1,8 +1,7 @@
-import { socialTwitter } from 'react-icons-kit/ionicons/socialTwitter';
-import { socialFacebook } from 'react-icons-kit/ionicons/socialFacebook';
-import { socialDribbbleOutline } from 'react-icons-kit/ionicons/socialDribbbleOutline';
-import { socialGithub } from 'react-icons-kit/ionicons/socialGithub';
-import { socialGoogleplusOutline } from 'react-icons-kit/ionicons/socialGoogleplusOutline';
+import { mail } from 'react-icons-kit/feather/mail';
+import { telegram } from 'react-icons-kit/fa/telegram';
+import { whatsapp } from 'react-icons-kit/fa/whatsapp';
+import { github } from 'react-icons-kit/fa/github';
 
 import Awardee1 from '../../assets/image/portfolio/awardee-1.png';
 import Awardee2 from '../../assets/image/portfolio/awardee-2.png';
@@ -36,6 +35,24 @@ import Reviewer1 from '../../assets/image/portfolio/client-avatar-1.jpg';
 import Reviewer2 from '../../assets/image/portfolio/client-avatar-2.jpg';
 import Reviewer3 from '../../assets/image/portfolio/client-avatar-3.jpg';
 
+// Award section: stable image URLs (main logos + single shared thumbnail)
+const U = (id, w = 200) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&h=${w}&fit=crop&q=80`;
+const P = (text, w = 200) =>
+  `https://placehold.co/${w}x${w}/1e3a5f/ffffff?text=${encodeURIComponent(text)}`;
+// Main award logos – stable placeholders (replace with real cert/badge URLs if you have them)
+const AWARD_DATABRICKS = P('Databricks');
+const AWARD_AZURE = P('Azure');
+const AWARD_AWS = P('AWS');
+const AWARD_DOCKER = P('Docker');
+// Single non-person image for all certification card thumbnails (certificate/badge style)
+const AWARD_CARD_THUMB =
+  'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=96&h=96&fit=crop&q=80';
+// Avatars for Contact and Testimonial sections only (not for Awards)
+const AVATAR1 = U('1507003211169-0a1dd7228f2d');
+const AVATAR2 = U('1494790108377-be9c29b29330');
+const AVATAR3 = U('1472099645785-5658abf4ff4e');
+
 // Resume-based content (Software Engineer + Data Engineer)
 export const BANNER = {
   greeting: "Hello, I'm",
@@ -48,30 +65,20 @@ export const BANNER = {
 
 export const CONTACT = {
   email: 'mehdi.jahani.zengir@gmail.com',
+  phone: '+989358889813',
   replyTime: 'Reply time: within 1–2 working days',
+  avatarUrl: AVATAR1,
 };
 
+// GitHub (portfolio), then Email, Telegram, WhatsApp
+export const GITHUB_URL = 'https://github.com/mehdi-jahani';
+export const GITHUB_LABEL = 'View portfolio on GitHub';
+
 export const SOCIAL_PROFILES = [
-  {
-    icon: socialTwitter,
-    url: '#',
-  },
-  {
-    icon: socialFacebook,
-    url: '#',
-  },
-  {
-    icon: socialDribbbleOutline,
-    url: '#',
-  },
-  {
-    icon: socialGithub,
-    url: '#',
-  },
-  {
-    icon: socialGoogleplusOutline,
-    url: '#',
-  },
+  { icon: github, url: GITHUB_URL },
+  { icon: mail, url: 'mailto:mehdi.jahani.zengir@gmail.com' },
+  { icon: telegram, url: 'https://t.me/+989358889813' },
+  { icon: whatsapp, url: 'https://wa.me/989358889813' },
 ];
 
 export const MENU_ITEMS = [
@@ -97,37 +104,37 @@ export const MENU_ITEMS = [
   },
 ];
 
-// Certifications (from resume)
+// Certifications – one relevant image per card (data, Azure, AWS, containers)
 export const AWARDS = [
   {
-    awardLogo: AwardImage1,
+    awardLogo: AWARD_DATABRICKS,
     awardName: 'Databricks Certified Data Engineer Professional',
     awardDetails: 'Databricks',
-    awardeeLogo: Awardee1,
+    awardeeLogo: AWARD_CARD_THUMB,
     awardeeName: 'Certification',
     date: '2023',
   },
   {
-    awardLogo: AwardImage2,
+    awardLogo: AWARD_AZURE,
     awardName: 'Microsoft Certified: Azure Data Engineer Associate (DP-203)',
     awardDetails: 'Microsoft',
-    awardeeLogo: Awardee2,
+    awardeeLogo: AWARD_CARD_THUMB,
     awardeeName: 'Certification',
     date: '2022',
   },
   {
-    awardLogo: AwardImage3,
+    awardLogo: AWARD_AWS,
     awardName: 'AWS Certified Cloud Practitioner',
     awardDetails: 'Amazon Web Services',
-    awardeeLogo: Awardee3,
+    awardeeLogo: AWARD_CARD_THUMB,
     awardeeName: 'Certification',
     date: '',
   },
   {
-    awardLogo: AwardImage4,
+    awardLogo: AWARD_DOCKER,
     awardName: 'Docker & Kubernetes: The Complete Guide',
     awardDetails: 'Udemy',
-    awardeeLogo: Awardee4,
+    awardeeLogo: AWARD_CARD_THUMB,
     awardeeName: 'Certification',
     date: '',
   },
@@ -317,7 +324,7 @@ export const CLIENTS = [
 
 export const TESTIMONIAL = [
   {
-    image: Reviewer1,
+    image: AVATAR1,
     review:
       'Mehdi combines deep technical skill with a clear focus on scalability and reliability. He delivered a Data Lakehouse that reduced our data latency by 40% and established patterns the whole team now follows.',
     name: '— Backend & Data',
@@ -327,7 +334,7 @@ export const TESTIMONIAL = [
     organizationURL: '#',
   },
   {
-    image: Reviewer2,
+    image: AVATAR2,
     review:
       'Strong in both software and data engineering—from RESTful APIs and microservices to MLOps and cloud infrastructure. Works effectively with international and remote teams.',
     name: '— Cloud & AI',
@@ -337,7 +344,7 @@ export const TESTIMONIAL = [
     organizationURL: '#',
   },
   {
-    image: Reviewer3,
+    image: AVATAR3,
     review:
       'Proven track record turning complex requirements into production-ready solutions: 6+ years, GDPR-compliant data systems, 99.9% availability targets, and significant cost optimizations.',
     name: '— Impact',

@@ -1,22 +1,22 @@
 import React, { useContext } from 'react';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
+import Icon from 'react-icons-kit';
+import { github } from 'react-icons-kit/fa/github';
 import NavbarWrapper from 'common/components/Navbar';
 import Drawer from 'common/components/Drawer';
-import Button from 'common/components/Button';
 import Logo from 'common/components/UIElements/Logo';
 import Box from 'common/components/Box';
 import HamburgMenu from 'common/components/HamburgMenu';
 import Container from 'common/components/UI/Container';
 import { DrawerContext } from 'common/contexts/DrawerContext';
 
-import { MENU_ITEMS } from 'common/data/Portfolio/data';
+import { MENU_ITEMS, GITHUB_URL, GITHUB_LABEL } from 'common/data/Portfolio/data';
 import ScrollSpyMenu from 'common/components/ScrollSpyMenu';
 
 import LogoImage from 'common/assets/image/portfolio/logo.png';
 import LogoImageAlt from 'common/assets/image/portfolio/logo-alt.png';
 
-const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
+const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer
@@ -50,9 +50,24 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               menuItems={MENU_ITEMS}
               offset={-70}
             />
-            <Link href="#" className="navbar_button">
-              <Button {...button} title="LET'S TALK" />
-            </Link>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar_github_link"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                color: '#3444f1',
+                fontWeight: 600,
+                fontSize: '16px',
+                textDecoration: 'none',
+              }}
+            >
+              <Icon icon={github} size={20} />
+              <span>{GITHUB_LABEL}</span>
+            </a>
             <Drawer
               width="420px"
               placement="right"
@@ -66,9 +81,25 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-              <Link href="#" className="navbar_drawer_button">
-                <Button {...button} title="LET'S TALK" />
-              </Link>
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navbar_github_link"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#3444f1',
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  textDecoration: 'none',
+                  marginTop: '16px',
+                }}
+              >
+                <Icon icon={github} size={20} />
+                <span>{GITHUB_LABEL}</span>
+              </a>
             </Drawer>
           </Box>
         </Box>
@@ -80,7 +111,6 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 Navbar.propTypes = {
   navbarStyle: PropTypes.object,
   logoStyle: PropTypes.object,
-  button: PropTypes.object,
   row: PropTypes.object,
   menuWrapper: PropTypes.object,
 };
@@ -98,14 +128,6 @@ Navbar.defaultProps = {
   },
   logoStyle: {
     maxWidth: ['120px', '130px'],
-  },
-  button: {
-    type: 'button',
-    fontSize: '16px',
-    pl: '0',
-    pr: '0',
-    colors: 'primary',
-    minHeight: 'auto',
   },
   menuWrapper: {
     flexBox: true,
