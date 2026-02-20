@@ -11,7 +11,7 @@ import { plus } from 'react-icons-kit/feather/plus';
 
 import { ButtonWrapper } from '../../Portfolio/portfolio.style';
 import ProcessItem from './process.style';
-import { PROCESS_STEPS, SERVICE_LIST } from 'common/data/Portfolio/data';
+import { PROCESS_STEPS, SERVICE_LIST, CONTACT } from 'common/data/Portfolio/data';
 
 const ProcessSection = ({
   sectionWrapper,
@@ -92,11 +92,13 @@ const ProcessSection = ({
             <Box {...buttonWrapper}>
               <Text content="Start Your Project ?" {...buttonLabelStyle} />
               <ButtonWrapper>
-                <Button
-                  title="hello@redq.io"
-                  className="portfolio_button"
-                  {...buttonStyle}
-                />
+                <a href={`mailto:${CONTACT.email}`} style={{ textDecoration: 'none' }}>
+                  <Button
+                    title={CONTACT.email}
+                    className="portfolio_button"
+                    {...buttonStyle}
+                  />
+                </a>
               </ButtonWrapper>
             </Box>
           </Box>
