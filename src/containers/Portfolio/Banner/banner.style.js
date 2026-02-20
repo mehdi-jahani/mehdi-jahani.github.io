@@ -12,11 +12,6 @@ const BannerWrapper = styled.section`
     min-height: 100vh;
   }
 
-  .image_area {
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
 `;
 
 export default BannerWrapper;

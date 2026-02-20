@@ -13,8 +13,7 @@ import { DrawerContext } from 'common/contexts/DrawerContext';
 import { MENU_ITEMS, GITHUB_URL, GITHUB_LABEL } from 'common/data/Portfolio/data';
 import ScrollSpyMenu from 'common/components/ScrollSpyMenu';
 
-import LogoImage from 'common/assets/image/portfolio/logo.png';
-import LogoImageAlt from 'common/assets/image/portfolio/logo-alt.png';
+import LogoImage from 'common/assets/image/portfolio/LOGO-MJ.png';
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -39,7 +38,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
           />
           <Logo
             href="#"
-            logoSrc={LogoImageAlt}
+            logoSrc={LogoImage}
             title="Portfolio"
             logoStyle={logoStyle}
             className="logo-alt"
@@ -127,7 +126,10 @@ Navbar.defaultProps = {
     width: '100%',
   },
   logoStyle: {
-    maxWidth: ['120px', '130px'],
+    maxWidth: '60px',
+    maxHeight: '60px',
+    width: 'auto',
+    height: 'auto',
   },
   menuWrapper: {
     flexBox: true,

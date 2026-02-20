@@ -4,19 +4,16 @@ import Icon from 'react-icons-kit';
 import Box from 'common/components/Box';
 import Text from 'common/components/Text';
 import Heading from 'common/components/Heading';
-import NextImage from 'common/components/NextImage';
 import Container from 'common/components/UI/Container';
 import SocialProfile from '../SocialProfile';
 import BannerWrapper from './banner.style';
 
 import { SOCIAL_PROFILES, BANNER } from 'common/data/Portfolio/data';
 import { cornerDownRight } from 'react-icons-kit/feather/cornerDownRight';
-import PersonImage from 'common/assets/image/portfolio/person.png';
 
 const BannerSection = ({
   row,
   contentArea,
-  imageArea,
   greetingStyle,
   nameStyle,
   designationStyle,
@@ -43,9 +40,6 @@ const BannerSection = ({
             <Text content={BANNER.about} {...aboutStyle} />
             <SocialProfile items={SOCIAL_PROFILES} />
           </Box>
-          <Box {...imageArea} className="image_area">
-            <NextImage src={PersonImage} alt={BANNER.name} />
-          </Box>
         </Box>
       </Container>
     </BannerWrapper>
@@ -55,7 +49,6 @@ const BannerSection = ({
 BannerSection.propTypes = {
   row: PropTypes.object,
   contentArea: PropTypes.object,
-  imageArea: PropTypes.object,
   greetingStyle: PropTypes.object,
   nameStyle: PropTypes.object,
   designationStyle: PropTypes.object,
@@ -68,20 +61,19 @@ BannerSection.defaultProps = {
   row: {
     flexBox: true,
     flexWrap: 'wrap',
-    alignItems: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   contentArea: {
-    width: ['100%', '100%', '50%', '40%'],
-    p: ['65px 0 80px 0', '65px 0 80px 0', '80px 0 60px 0', '0'],
+    width: '100%',
+    maxWidth: '800px',
+    p: ['65px 0 80px 0', '65px 0 80px 0', '80px 0 60px 0', '80px 0 60px 0'],
     flexBox: true,
     flexWrap: 'wrap',
     justifyContent: 'center',
     flexDirection: 'column',
-  },
-  imageArea: {
-    width: ['100%', '100%', '50%', '60%'],
-    flexBox: true,
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    textAlign: 'center',
   },
   greetingStyle: {
     as: 'h3',
@@ -89,6 +81,7 @@ BannerSection.defaultProps = {
     fontSize: ['18px', '18px', '18px', '20px', '30px'],
     fontWeight: '500',
     mb: '8px',
+    textAlign: 'center',
   },
   nameStyle: {
     as: 'h2',
@@ -96,6 +89,7 @@ BannerSection.defaultProps = {
     fontSize: ['38px', '38px', '44px', '60px', '80px'],
     fontWeight: '800',
     mb: '6px',
+    textAlign: 'center',
   },
   designationStyle: {
     as: 'h3',
@@ -103,10 +97,12 @@ BannerSection.defaultProps = {
     fontSize: ['18px', '18px', '18px', '20px', '30px'],
     fontWeight: '700',
     mb: ['30px', '30px', '25px', '30px', '30px'],
+    textAlign: 'center',
   },
   roleWrapper: {
     flexBox: true,
     mb: '28px',
+    justifyContent: 'center',
   },
   roleStyle: {
     as: 'h4',
@@ -115,6 +111,7 @@ BannerSection.defaultProps = {
     color: '#fff',
     mb: '0',
     ml: '10px',
+    textAlign: 'center',
   },
   aboutStyle: {
     fontSize: ['15px', '15px', '15px', '16px', '16px'],
@@ -122,6 +119,7 @@ BannerSection.defaultProps = {
     color: '#fff',
     lineHeight: '1.5',
     mb: '50px',
+    textAlign: 'center',
   },
 };
 

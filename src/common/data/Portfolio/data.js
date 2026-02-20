@@ -15,6 +15,11 @@ import AwardImage4 from '../../assets/image/portfolio/award-4.png';
 import PortfolioImage1 from '../../assets/image/portfolio/portfolio-1.jpg';
 import PortfolioImage2 from '../../assets/image/portfolio/portfolio-2.jpg';
 
+import HealthMakerImage from '../../assets/image/portfolio/HEALTH-MAKER.png';
+import ShavazImage from '../../assets/image/portfolio/SHAVAZ.png';
+import ScalableApiImage from '../../assets/image/portfolio/SCALABLE-API.png';
+import VortemAIImage from '../../assets/image/portfolio/VORTEM-AI.png';
+
 import Step1 from '../../assets/image/portfolio/step-1.png';
 import Step2 from '../../assets/image/portfolio/step-2.png';
 import Step3 from '../../assets/image/portfolio/step-3.png';
@@ -148,7 +153,7 @@ export const PORTFOLIO_SHOWCASE = [
         title: 'Shavaz – Data Lakehouse & Distributed Services',
         description:
           'Architected a scalable Data Lakehouse for high-volume e-commerce; designed and scaled distributed backend services processing millions of records with Python and PySpark. Streamlined real-time ingestion (40% lower latency), event-driven pipelines with Kafka, and RESTful APIs for data-intensive applications.',
-        image: PortfolioImage1,
+        image: ShavazImage,
         link: '#',
         featuredIn: 'Hybrid/Remote',
         featuredLink: '#',
@@ -166,7 +171,7 @@ export const PORTFOLIO_SHOWCASE = [
         title: 'Vortem-AI – Data Pipelines & AI Integration',
         description:
           'Spearheaded data pipelines for AI/ML model training and MLOps; built microservices with Docker and Kubernetes on AWS. Designed RESTful APIs for AI-driven applications and optimized Snowflake queries (50% faster execution). Worked with international on-site team following Agile.',
-        image: PortfolioImage2,
+        image: VortemAIImage,
         link: '#',
         featuredIn: 'Dubai, UAE',
         featuredLink: '#',
@@ -189,7 +194,7 @@ export const PORTFOLIO_SHOWCASE = [
         title: 'HealthMaker – Secure Data & Automation',
         description:
           'Engineered secure, compliant data ingestion for healthcare (GDPR/HIPAA principles); built real-time dashboards and automated data loads with Python and Cron (saving 20 hours/week). Improved daily job completion by 25% and collaborated with a distributed international team across time zones.',
-        image: PortfolioImage1,
+        image: HealthMakerImage,
         link: '#',
         featuredIn: 'Doha, Qatar (Remote)',
         featuredLink: '#',
@@ -207,7 +212,7 @@ export const PORTFOLIO_SHOWCASE = [
         title: 'Scalable APIs & Event-Driven Systems',
         description:
           'Proven track record building robust RESTful APIs, integrating AI/ML into production, and optimizing cloud infrastructure with Terraform and CI/CD. Focus on fault tolerance, scalability, and clean architecture for backend and data-intensive applications.',
-        image: PortfolioImage2,
+        image: ScalableApiImage,
         link: '#',
         featuredIn: 'International Teams',
         featuredLink: '#',
